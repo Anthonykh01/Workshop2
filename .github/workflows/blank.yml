@@ -12,4 +12,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Deploy to IPFS
       run: |
-        curl -X POST -F file=ressources -H "pinata_api_key: ${{d3d99cbbe9fbe4e57337}}" -H "pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}" https://api.pinata.cloud/pinning/pinFileToIPFS
+        curl -X POST -F file=@./ -H "pinata_api_key: ${{d3d99cbbe9fbe4e57337}}" -H "pinata_secret_api_key: ${{ secrets.PINATA_SECRET_API_KEY }}" https://api.pinata.cloud/pinning/pinFileToIPFS
